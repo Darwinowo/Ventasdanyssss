@@ -89,12 +89,12 @@
                             <span> </span>
                         </div>
                         <div class="col cantidad">
-                            <button class="btn-cantidad" data-action="increase"> + </button>
+                            <button class="btn-aumentar"> + </button>
                             <span class="total-cantidad">1</span>
-                            <button class="btn-cantidad" data-action="decrease"> - </button>
+                            <button class="btn-disminuir"> - </button>
                         </div>
                         <div class="col eliminar">
-                            <span> <i class="fa-solid fa-xmark"></i> </span>
+                            <span class="btn-eliminar"> <i class="fa-solid fa-xmark"></i> </span>
                         </div>
                         <div class="col precio">
                             <span> $ 25.000</span>
@@ -112,12 +112,12 @@
                             <span> </span>
                         </div>
                         <div class="col cantidad">
-                            <button class="btn-cantidad" data-action="increase"> + </button>
+                            <button class="btn-aumentar"> + </button>
                             <span class="total-cantidad">1</span>
-                            <button class="btn-cantidad" data-action="decrease"> - </button>
+                            <button class="btn-disminuir"> - </button>
                         </div>
                         <div class="col eliminar">
-                            <span> <i class="fa-solid fa-xmark"></i> </span>
+                            <span class="btn-eliminar"> <i class="fa-solid fa-xmark"></i> </span>
                         </div>
                         <div class="col precio">
                             <span> $ 30.000</span>
@@ -126,37 +126,13 @@
                     <div class="finalizar-compra">
                         <h3>Total Compra</h3>
                         <div class="monto">$ 55.000,00</div>
-                        <button class="btn-pagar" id="btn-comprar">PAGAR</button>
+                        <button class="btn-pagar" id="btnPagar">PAGAR</button>
                     </div>
                 </div>
             </section>
-
         </section>
     </div>
 
-    <script>
-        // Función para manejar la compra
-        document.getElementById('btn-comprar').addEventListener('click', function() {
-            const productos = [];
-
-            // Obtener nombres de productos del carrito
-            const filas = document.querySelectorAll('.fila');
-            filas.forEach(function(fila, index) {
-                if (index > 0) { // Ignorar la fila del encabezado
-                    const descripcion = fila.querySelector('.descripcion span').innerText;
-                    const cantidad = fila.querySelector('.total-cantidad').innerText;
-                    productos.push(`${descripcion} (Cantidad: ${cantidad})`);
-                }
-            });
-
-            // Crear el mensaje de WhatsApp
-            const mensaje = `Hola, estoy interesado en los siguientes productos:\n${productos.join('\n')}`;
-            const numeroWhatsApp = '51900038452'; // Tu número de WhatsApp
-            const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`;
-
-            // Redirigir a WhatsApp
-            window.open(urlWhatsApp, '_blank');
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
