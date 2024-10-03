@@ -75,9 +75,9 @@
                                 <img src="img/shoes1.png" alt="">
                                 <h2>Nike Air Max 270 to Chuck Taylors</h2>
                                 <h2>$20.000</h2>
+                                <button class="btn-agregar" data-precio="20000">Agregar al carrito</button>
                             </div>
                         </a>
-
                     </div>
                     <div class="col fondo-dots">
                         <header>
@@ -93,6 +93,7 @@
                                 <img src="img/shoes2.png" alt="">
                                 <h2>Zapatillas Jaguar Oficial Deportiva</h2>
                                 <h2>$35.000</h2>
+                                <button class="btn-agregar" data-precio="35000">Agregar al carrito</button>
                             </div>
                         </a>
                     </div>
@@ -110,6 +111,7 @@
                                 <img src="img/shoes3.png" alt="">
                                 <h2>Zapatillas Entrenamiento Nike Air Max</h2>
                                 <h2>$35.000</h2>
+                                <button class="btn-agregar" data-precio="35000">Agregar al carrito</button>
                             </div>
                         </a>
                     </div>
@@ -129,6 +131,7 @@
                                 <img src="img/shoes4.png" alt="">
                                 <h2>Zapatillas Nike Court Vision Low Next Nature</h2>
                                 <h2>$64.000</h2>
+                                <button class="btn-agregar" data-precio="64000">Agregar al carrito</button>
                             </div>
                         </a>
                     </div>
@@ -146,6 +149,7 @@
                                 <img src="img/shoes5.png" alt="">
                                 <h2>Zapatillas Urbanas Olympikus G Dínamo Mujer</h2>
                                 <h2>$17.999</h2>
+                                <button class="btn-agregar" data-precio="17999">Agregar al carrito</button>
                             </div>
                         </a>
                     </div>
@@ -163,6 +167,7 @@
                                 <img src="img/shoes6.png" alt="">
                                 <h2>Zapatillas Topper X Forcer (Cf)</h2>
                                 <h2>$24.000</h2>
+                                <button class="btn-agregar" data-precio="24000">Agregar al carrito</button>
                             </div>
                         </a>
                     </div>
@@ -172,5 +177,18 @@
     </div>
 
     <script src="script.js"></script>
+    <script>
+        // Funcionalidad para agregar productos al carrito
+        const botonesAgregar = document.querySelectorAll('.btn-agregar');
+
+        botonesAgregar.forEach(boton => {
+            boton.addEventListener('click', () => {
+                const precio = parseInt(boton.getAttribute('data-precio'));
+                // Aquí puedes agregar la lógica para agregar el producto al carrito
+                alert(`Producto agregado al carrito por $${precio}`);
+                // Aquí puedes incrementar el total en la sección del carrito, si corresponde
+            });
+        });
+    </script>
 </body>
 </html>
